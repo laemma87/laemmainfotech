@@ -40,7 +40,7 @@ $products = $pdo->query("SELECT * FROM products ORDER BY created_at DESC")->fetc
         <?php foreach ($products as $p): ?>
             <tr>
                 <td style="display: flex; align-items: center; gap: 15px;">
-                    <img src="/laemmainfotech/assets/uploads/products/<?php echo $p['image']; ?>" 
+                    <img src="../assets/uploads/products/<?php echo $p['image']; ?>" 
                          onerror="this.src='https://via.placeholder.com/40x40?text=No'"
                          style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                     <span><?php echo htmlspecialchars($p['name']); ?></span>

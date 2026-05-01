@@ -24,7 +24,7 @@ $related_products = $related_stmt->fetchAll();
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
             <!-- Left: Image -->
             <div style="background: var(--glass); border: 1px solid var(--glass-border); border-radius: 30px; padding: 20px; overflow: hidden; position: sticky; top: 120px;">
-                <img src="/laemmainfotech/assets/uploads/products/<?php echo $product['image']; ?>" 
+                <img src="<?php echo BASE_URL; ?>/assets/uploads/products/<?php echo $product['image']; ?>" 
                      alt="<?php echo $product['name']; ?>" 
                      onerror="this.src='https://via.placeholder.com/600x600?text=<?php echo urlencode($product['name']); ?>'"
                      style="width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); height: 500px; object-fit: cover;">
@@ -84,7 +84,7 @@ $related_products = $related_stmt->fetchAll();
             <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
                 <?php foreach ($related_products as $rp): ?>
                     <a href="product.php?id=<?php echo $rp['id']; ?>" class="card" style="padding: 15px;">
-                        <img src="/laemmainfotech/assets/uploads/products/<?php echo $rp['image']; ?>" 
+                        <img src="<?php echo BASE_URL; ?>/assets/uploads/products/<?php echo $rp['image']; ?>" 
                              onerror="this.src='https://via.placeholder.com/250x180?text=<?php echo urlencode($rp['name']); ?>'"
                              style="width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
                         <h5 style="margin-bottom: 10px;"><?php echo htmlspecialchars($rp['name']); ?></h5>

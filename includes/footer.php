@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="/laemmainfotech/index.php" class="logo" style="margin-bottom: 20px; display: inline-block;">
+                    <a href="<?php echo BASE_URL; ?>/index.php" class="logo" style="margin-bottom: 20px; display: inline-block;">
                         LAEMMA <span>INFO TECH</span>
                     </a>
                     <p style="color: var(--text-muted); margin-bottom: 20px;">
@@ -19,20 +19,20 @@
                 <div class="footer-col">
                     <h4>Serivisi Dutanga</h4>
                     <ul>
-                        <li><a href="/laemmainfotech/index.php">Kwamamaza</a></li>
-                        <li><a href="/laemmainfotech/index.php">Video Production</a></li>
-                        <li><a href="/laemmainfotech/index.php">Hosting</a></li>
-                        <li><a href="/laemmainfotech/index.php">Domain Registration</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php">Kwamamaza</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php">Video Production</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php">Hosting</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php">Domain Registration</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/laemmainfotech/index.php">Home</a></li>
-                        <li><a href="/laemmainfotech/index.php#services">Services</a></li>
-                        <li><a href="/laemmainfotech/shop/index.php">Our Products</a></li>
-                        <li><a href="/laemmainfotech/index.php#faqs">FAQs</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php">Home</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php#services">Services</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/shop/index.php">Our Products</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/index.php#faqs">FAQs</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -53,6 +53,6 @@
         </div>
     </footer>
     
-    <script src="/laemmainfotech/assets/js/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>/assets/js/main.js"></script>
 </body>
 </html>

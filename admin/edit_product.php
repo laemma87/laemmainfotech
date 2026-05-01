@@ -106,7 +106,7 @@ try {
         <div class="form-group" style="margin-bottom: 25px;">
             <label>Current Image</label>
             <div style="margin-bottom: 15px;">
-                <img src="/laemmainfotech/assets/uploads/products/<?php echo $product['image']; ?>" 
+                <img src="../assets/uploads/products/<?php echo $product['image']; ?>" 
                      onerror="this.src='https://via.placeholder.com/100?text=No+Image'"
                      style="width: 100px; height: 100px; object-fit: cover; border-radius: 10px; border: 1px solid var(--glass-border);">
             </div>

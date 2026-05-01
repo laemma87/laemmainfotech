@@ -39,7 +39,7 @@ $trending_products = $trending_stmt->fetchAll();
                             <?php if ($product['discount'] > 0): ?>
                                 <span style="position: absolute; top: 10px; right: 10px; background: #ff4757; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Sale</span>
                             <?php endif; ?>
-                            <img src="/laemmainfotech/assets/uploads/products/<?php echo $product['image']; ?>" 
+                            <img src="<?php echo BASE_URL; ?>/assets/uploads/products/<?php echo $product['image']; ?>" 
                                  alt="<?php echo $product['name']; ?>" 
                                  onerror="this.src='https://via.placeholder.com/300x200?text=<?php echo urlencode($product['name']); ?>'"
                                  style="width: 100%; height: 100%; object-fit: cover;">
@@ -74,7 +74,7 @@ $trending_products = $trending_stmt->fetchAll();
             <?php foreach ($products as $product): ?>
                 <div class="card" style="padding: 20px;">
                     <div style="height: 180px; background: rgba(255,255,255,0.05); border-radius: 15px; overflow: hidden; margin-bottom: 20px;">
-                        <img src="/laemmainfotech/assets/uploads/products/<?php echo $product['image']; ?>" 
+                        <img src="<?php echo BASE_URL; ?>/assets/uploads/products/<?php echo $product['image']; ?>" 
                              onerror="this.src='https://via.placeholder.com/300x180?text=<?php echo urlencode($product['name']); ?>'"
                              style="width: 100%; height: 100%; object-fit: cover;">
                     </div>

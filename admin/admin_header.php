@@ -10,7 +10,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard | LAEMMA</title>
-    <link rel="stylesheet" href="/laemmainfotech/assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { display: flex; min-height: 100vh; background: var(--background); color: var(--text-main); }
@@ -55,7 +55,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 </head>
 <body>
     <div class="sidebar">
-        <a href="/laemmainfotech/index.php" class="sidebar-brand">LAEMMA <span style="color: var(--primary);">CONTROLLER</span></a>
+        <a href="../index.php" class="sidebar-brand">LAEMMA <span style="color: var(--primary);">CONTROLLER</span></a>
         <ul class="nav-menu">
             <li><a href="controller.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
             <li><a href="products.php"><i class="fas fa-box"></i> Products</a></li>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
             <li><a href="users.php"><i class="fas fa-users"></i> Users</a></li>
             <li><a href="social_media.php"><i class="fas fa-share-alt"></i> Social Media</a></li>
             <li><a href="settings.php"><i class="fas fa-cog"></i> Settings</a></li>
-            <li style="margin-top: 50px;"><a href="/laemmainfotech/logout.php" style="color: #ff4757;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li style="margin-top: 50px;"><a href="../logout.php" style="color: #ff4757;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
     <div class="main-content">
