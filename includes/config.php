@@ -9,7 +9,12 @@ $is_production = getenv('MYSQLHOST') ? 'PRODUCTION' : 'DEVELOPMENT';
 define('APP_MODE', $is_production);
 
 // Base URL configuration
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$protocol = "http://";
+if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) {
+    $protocol = "https://";
+} elseif (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $protocol = "https://";
+}
 
 if ($_SERVER['HTTP_HOST'] === 'localhost') {
     define('BASE_URL', $protocol . $_SERVER['HTTP_HOST'] . '/laemmainfotech');
