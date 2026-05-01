@@ -3,10 +3,18 @@ include 'includes/db.php';
 include 'includes/header.php'; 
 
 // Fetch Latest 3 Blogs
-$latest_blogs = $pdo->query("SELECT * FROM blogs WHERE status='published' ORDER BY created_at DESC LIMIT 3")->fetchAll();
+try {
+    $latest_blogs = $pdo->query("SELECT * FROM blogs WHERE status='published' ORDER BY created_at DESC LIMIT 3")->fetchAll();
+} catch (Exception $e) {
+    $latest_blogs = [];
+}
 
 // Fetch Partners
-$partners = $pdo->query("SELECT * FROM partners ORDER BY name ASC")->fetchAll();
+try {
+    $partners = $pdo->query("SELECT * FROM partners ORDER BY name ASC")->fetchAll();
+} catch (Exception $e) {
+    $partners = [];
+}
 ?>
 
 <main>
