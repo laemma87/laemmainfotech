@@ -4,9 +4,9 @@
  */
 
 // Deployment Mode: 'DEVELOPMENT' or 'PRODUCTION'
-// WARNING: Keep this as 'DEVELOPMENT' when testing on your own computer (localhost).
-// Change it to 'PRODUCTION' ONLY on the copy you upload to InfinityFree.
-define('APP_MODE', 'DEVELOPMENT');
+// Automatically switch to 'PRODUCTION' when hosted on Railway
+$is_production = getenv('MYSQLHOST') ? 'PRODUCTION' : 'DEVELOPMENT';
+define('APP_MODE', $is_production);
 
 // Base URL configuration
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
